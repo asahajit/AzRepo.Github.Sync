@@ -41,7 +41,13 @@ namespace AzRepo.Github.Sync
             string PsFilePath = new DirectoryInfo(projectDirectory).GetFiles().Where(n => n.Name.Equals(PowershellScriptName)).SingleOrDefault().FullName;
             PowerShellHelper ps = new PowerShellHelper();
             RepoConfig repoConfig= new RepoConfig();
-            ps.RunCustomPowerShellScriptWithSecurity(PsFilePath, repoConfig.GetRepoConfigList());
+            //ps.RunCustomPowerShellScriptWithSecurity(PsFilePath, repoConfig.GetRepoConfigList());
+            string ADOCloneURL=richTextBox2.Text;
+            string GitHubCloneURL = richTextBox1.Text;
+            string GitRepoName= GitHubCloneURL.Split('/').LastOrDefault().Replace(".git",string.Empty); ;
+            if (!string.IsNullOrEmpty(ADOCloneURL) && !string.IsNullOrEmpty(GitHubCloneURL) && !string.IsNullOrEmpty(GitRepoName))
+            ps.RunCustomPowerShellScriptUI(PsFilePath,ADOCloneURL,GitHubCloneURL,GitRepoName);
+
         }
 
         private void button2_Click(object sender, EventArgs e)

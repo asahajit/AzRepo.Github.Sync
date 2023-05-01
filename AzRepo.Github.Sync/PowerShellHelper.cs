@@ -75,7 +75,7 @@ namespace AzRepo.Github.Sync
             foreach (RepoConfig repoConfig in RepoList)
             {
 
-                string argument = string.Format(" -GitHubSourcePAT {0} -ADODestinationPAT {1} -$GitRepoName {2} -ADOCloneURL {3} -GitHubCloneURL {4}", 
+                string argument = string.Format(" -GitHubSourcePAT {0} -ADODestinationPAT {1} -AzureRepoName {2} -ADOCloneURL {3} -GitHubCloneURL {4}", 
                     GitHubSourcePAT, ADODestinationPAT, repoConfig.GitHubRepoName, repoConfig.ADOCloneURL, repoConfig.GitHubCloneURL);
                 string command = string.Concat(script_path, argument);
                 RunPowerShellCommand("Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser");
@@ -96,21 +96,11 @@ namespace AzRepo.Github.Sync
             string GitHubSourcePAT = System.Configuration.ConfigurationManager.AppSettings["GitHubSourcePAT"];
             string ADODestinationPAT = System.Configuration.ConfigurationManager.AppSettings["ADODestinationPAT"];
 
-            string argument = string.Format(" -GitHubSourcePAT {0} -ADODestinationPAT {1} -$GitRepoName {2} -ADOCloneURL {3} -GitHubCloneURL {4}",
-                GitHubSourcePAT, ADODestinationPAT, GitRepoName, ADOCloneURL, GitRepoName);
+            string argument = string.Format(" -GitHubSourcePAT {0} -ADODestinationPAT {1} -AzureRepoName {2} -ADOCloneURL {3} -GitHubCloneURL {4}",
+                GitHubSourcePAT, ADODestinationPAT, GitRepoName, ADOCloneURL, GitHubCloneURL);
             string command = string.Concat(script_path, argument);
             RunPowerShellCommand("Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser");
             RunPowerShellCommand(command);
-
-            //ps.AddCommand(script_path);
-
-            //foreach (string scriptParameter in scriptParameters)
-            //{
-            //    ps.AddArgument(scriptParameter);
-            //}
-
-            //Collection<PSObject> psObjects;
-            //psObjects = pipeline.Invoke();
             return false;
         }
     }

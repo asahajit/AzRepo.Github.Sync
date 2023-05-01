@@ -19,14 +19,14 @@
 Write-Host ' - - - - - - - - - - - - - - - - - - - - - - - - -'
 Write-Host ' reflect Azure Devops repo changes to GitHub repo'
 Write-Host ' - - - - - - - - - - - - - - - - - - - - - - - - - '
-$GitRepoName = "eSmartbench"
+#$AzureRepoName = "eSmartbench"
 #$ADOCloneURL = "dev.azure.com/asahajit/Asahajit/_git/GitSyncTest"
 #$GitHubCloneURL = "github.com/asahajit/GitSyncTest.git"
 $stageDir = pwd | Split-Path
 Write-Host "stage Dir is : $stageDir"
 $AdoDir = $stageDir +"\"+"ado"
 Write-Host "ADO Dir : $stageDir"
-$destination = $AdoDir+"\"+ $GitRepoName+".git"
+$destination = $AdoDir+"\"+ $AzureRepoName+".git"
 Write-Host "destination: $destination"
 #Please make sure, you remove https from azure-repo-clone-url
 $sourceURL = "https://$($GitHubSourcePAT)"+"@"+"$($GitHubCloneURL)"
