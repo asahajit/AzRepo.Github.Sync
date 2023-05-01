@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzRepo.Github.Sync", "AzRepo.Github.Sync\AzRepo.Github.Sync.csproj", "{699DE61F-7D37-40A0-BDBA-11C2FFCB7D15}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{699DE61F-7D37-40A0-BDBA-11C2FFCB7D15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{699DE61F-7D37-40A0-BDBA-11C2FFCB7D15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{699DE61F-7D37-40A0-BDBA-11C2FFCB7D15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{699DE61F-7D37-40A0-BDBA-11C2FFCB7D15}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FA9A044D-0B5B-4C82-B49F-F2771DE3BD71}
+	EndGlobalSection
+EndGlobal

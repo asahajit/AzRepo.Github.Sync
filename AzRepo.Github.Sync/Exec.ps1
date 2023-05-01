@@ -1,0 +1,1 @@
+﻿.\SyncGitHubtoADO.ps1 -GitHubSourcePAT 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 -ADODestinationPAT ekrs7i6oecflphpjxzn4ny5q5widqjb4d7cfmyd3wavpap7izyaq -$GitRepoName eSmartbench
