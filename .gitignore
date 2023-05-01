@@ -363,3 +363,4 @@ MigrationBackup/
 FodyWeavers.xsd
 /AzRepo.Github.Sync/App.Dev.config
 /AzRepo.Github.Sync/Notes.txt
+/AzRepo.Github.Sync/App.config
